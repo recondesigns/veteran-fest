@@ -8,10 +8,6 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 1px 10px rgba(0, 0, 0, 0.2);
-  & > img {
-    height: 40px;
-  }
   @media (min-width: 768px) {
         min-height: 72px;
     }
@@ -20,6 +16,7 @@ const HeaderContainer = styled.div`
 export default function Header() {
   return (
     <HeaderContainer>
+      Op Vets
     </HeaderContainer>
   )
 }
