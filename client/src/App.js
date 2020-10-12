@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 // import { AppStateContext } from './providers/Store'
-import { AdminView } from './componets/AdminView'
-import { VendorView } from './componets/VendorView'
-import { Playground } from './componets/Playground'
+import { AdminView } from './components/AdminView'
+import { VendorView } from './components/VendorView'
+import { Playground } from './components/Playground'
 
 
 const AppContainer = styled.div`
