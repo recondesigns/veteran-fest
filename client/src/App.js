@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react"
+import styled from "styled-components"
+import { Header } from './componets/Header'
+
+const AppContainer = styled.div`
+  border: 1px solid red;
+`;
 
 export default function App() {
   return (
-    <h1>App Component</h1>
+    <AppContainer>
+      <Header />
+    </AppContainer>
   )
 }
