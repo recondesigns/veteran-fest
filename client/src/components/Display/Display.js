@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { AppStateContext } from '../../providers/Store'
+import Login from './Login'
+import AdminView from './AdminView'
+import VendorView from './VendorView'
 
 const DisplayContainer = styled.div`
     box-sizing: border-box;
@@ -11,10 +14,28 @@ const DisplayContainer = styled.div`
 
 export default function Display() {
     const [appState] = useContext(AppStateContext)
-    console.log(appState)
+    const { userLoggedIn,  currentUser} = appState
+    const { userDetails } = currentUser
+    const { isAdmin } = userDetails
+    console.log(isAdmin)
+    
+
+    function setDisplay(loggedInStatus) {
+        if (loggedInStatus === false) {
+            return <Login />
+        } else if (loggedInStatus === true && isAdmin === true) {
+            return <AdminView />
+        } else if (loggedInStatus === true && isAdmin === false) {
+            return <VendorView />
+        }  
+    }
+
+    let display = setDisplay(userLoggedIn)
+
     return (
         <DisplayContainer>
             <p>Display Component</p>
+            {display}
         </DisplayContainer>
     )
 }
