@@ -24,7 +24,7 @@ const LabelText = styled.p`
     align-items: center;
     letter-spacing: 0.02em;
     color: #545454;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 
 `
 
@@ -32,27 +32,42 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 1px dotted red;
+    border-bottom: 1px solid #545454;
 `
 
 const StyledInput = styled.input`
+    margin: 4px 0px 4px 0px;
+    padding: 0px 0px 0px 0px;
     width: 100%;
-    /* background: lightblue; */
+    height: 24px;
+    outline: none;
+    border: none;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #545454;
+    background: none;
 `
 
 const HelperText = styled.p`
-    margin: 0px;
+    margin: 4px 0px 0px 0px;
     width: 100%;
     font-family: Open Sans;
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
-    display: flex;
+    display: none;
     align-items: center;
     letter-spacing: 0.02em;
     color: #EA7C7C;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 
 `
 
