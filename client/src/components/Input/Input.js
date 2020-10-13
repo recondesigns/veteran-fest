@@ -13,10 +13,7 @@ const InputContainer = styled.div`
     padding: 8px 8px 8px 8px;
     border-radius: 4px;
     opacity: ${props => props.opacity};
-
-    @media (min-width: 768px) {
-       width: 408px;
-    }
+    /* border: 1px solid blue; */
 `
 
 const LabelText = styled.p`

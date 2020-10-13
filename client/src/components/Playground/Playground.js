@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { StatusMessage } from '../StatusMessage'
 import { Header } from '../Header'
 import { Input } from '../Input'
+import { EditSheet } from '../EditSheet'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -28,7 +29,7 @@ const PlaygroundContainer = styled.div`
 const ComponentWrapper = styled.div`
     box-sizing: border-box;
     width: 312px;
-    /* border: 1px dotted lightcyan; */
+    border: 1px dotted lightcyan;
 
     & > h2 {
         margin: 64px 0px 16px 0px;
@@ -113,6 +114,23 @@ export default function Playground() {
                 <h3>'disabled'</h3>
                  <Input status={'disabled'} label={'Label'} />
             </ComponentWrapper>
+            {/* END OF COPY FOR EACH NEW COMPONENT */}
+
+
+
+
+
+            
+
+            {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
+            {/* EDIT SHEET COMPONENT */}
+            <h2>Edit Sheet</h2>
+            <h4>Props</h4>
+
+            {/* <ComponentWrapper> */}
+                {/* <h3>'normal'</h3> */}
+                <EditSheet />
+            {/* </ComponentWrapper> */}
             {/* END OF COPY FOR EACH NEW COMPONENT */}
 
         </PlaygroundContainer>
