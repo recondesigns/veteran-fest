@@ -7,6 +7,7 @@ import { StatusMessage } from '../StatusMessage'
 import { Header } from '../Header'
 import { Input } from '../Input'
 import { EditSheet } from '../EditSheet'
+import { Button } from '../Button'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -132,6 +133,14 @@ export default function Playground() {
                 <EditSheet />
             {/* </ComponentWrapper> */}
             {/* END OF COPY FOR EACH NEW COMPONENT */}
+
+
+
+            {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
+            {/* EDIT SHEET COMPONENT */}
+            <h2>Button</h2>
+            <h4>Props</h4>
+            <Button />
 
         </PlaygroundContainer>
     )
