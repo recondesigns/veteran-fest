@@ -13,10 +13,15 @@ const EditSheetContainer = styled.div`
     background: #FFFFFF;
     box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px;
-    border: 1px solid lightgoldenrodyellow;
+    /* border: 1px solid lightgoldenrodyellow; */
+
+    @media (min-width: 768px) {
+        max-width: 600px;
+    }
 `
 
 const SheetHeader = styled.h5`
+box-sizing: border-box;
 margin: 0px;
 width: 100%;
 height: 24px;
@@ -45,7 +50,7 @@ const TempButton = styled.div`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    border: 1px dotted pink;
+    /* border: 1px dotted pink; */
 
     & > div {
         margin-bottom: 20px;
@@ -61,8 +66,8 @@ export default function EditSheet() {
                 <Input status={'default'} label={'Last name'} />
                 <Input status={'default'} label={'Email'} />
                 <Input status={'default'} label={'Phone'} />
-                <TempButton>Button</TempButton>
-                <TempButton>Button</TempButton>
+                <TempButton>Button Placeholder</TempButton>
+                <TempButton>Button Placeholder</TempButton>
             </Wrapper>
         </EditSheetContainer>
     )
