@@ -86,7 +86,7 @@ export default function Playground() {
             <h2>Input</h2>
             <h4>Props</h4>
 
-            <h3>'default'</h3>
+            <h3>'normal'</h3>
             <Input status={'default'} label={'Label'} />
 
             <h3>'active'</h3>

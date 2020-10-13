@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import WarningIcon from './WarningIcon'
+import { setInputStatus } from './utils'
 
 const InputContainer = styled.div`
     width: 312px;
@@ -9,7 +10,8 @@ const InputContainer = styled.div`
     align-items: flex-start;
     padding: 8px 8px 8px 8px;
     border-radius: 4px;
-    border: 1px solid blue;
+    opacity: ${props => props.opacity};
+    /* border: 1px solid blue; */
 `
 
 const LabelText = styled.p`
@@ -32,7 +34,8 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #545454;
+    /* border-bottom: 1px solid #545454; */
+    border-bottom: ${props => props.borderBottom};
 `
 
 const StyledInput = styled.input`
@@ -51,7 +54,8 @@ const StyledInput = styled.input`
     display: flex;
     align-items: center;
     letter-spacing: 0.01em;
-    color: #545454;
+    /* color: #545454; */
+    color: ${props => props.color};
     background: none;
 `
 
@@ -63,7 +67,8 @@ const HelperText = styled.p`
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
-    display: none;
+    /* display: none; */
+    display: ${props => props.display};
     align-items: center;
     letter-spacing: 0.02em;
     color: #EA7C7C;
@@ -73,16 +78,17 @@ const HelperText = styled.p`
 
 export default function Input(props) {
     const { status, label } = props
-    console.log(status, label)
+    const { helperTextVisibility, warningIconVisibility, border, inputColor, opacity } = setInputStatus(status)
+    console.log(opacity)
 
     return (
-        <InputContainer>
+        <InputContainer opacity={opacity}>
             <LabelText>{label}</LabelText>
-            <Wrapper>
-                <StyledInput />
-                <WarningIcon status={status} />
+            <Wrapper borderBottom={border}>
+                <StyledInput color={inputColor} />
+                <WarningIcon display={warningIconVisibility} />
             </Wrapper>
-            <HelperText>Helper Text</HelperText>
+            <HelperText display={helperTextVisibility}>Helper Text</HelperText>
         </InputContainer>
     )
 }
