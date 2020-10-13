@@ -3,7 +3,6 @@ import styled from "styled-components";
 import closeIcon from "../../assets/icons/Vector.svg";
 
 const CloseContainer = styled.div`
-  margin: 0px 0px 0px 16px;
   height: 24px;
   display: flex;
 `;

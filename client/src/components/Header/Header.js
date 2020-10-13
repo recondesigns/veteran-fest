@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import UserIcon from "./UserIcon";
 import Close from './Close'
-import newHeaderLogo from "../../assets/images/vetfest-logo.svg";
+import newHeaderLogo from "../../assets/images/vetfest-logo.png";
 
 const HeaderContainer = styled.div`
-  padding: 0px 16px 0px 16px;
+box-sizing: border-box;
+  background: #FFFFFF;
+  margin: none;
+  padding: 10px 16px 10px 16px;
   width: 100%;
   min-height: 64px;
   display: flex;
@@ -15,6 +18,7 @@ const HeaderContainer = styled.div`
     min-height: 72px;
   }
 `;
+
 
 // const LogoContainer = styled.div`
 //   min-height: 64px;
@@ -27,7 +31,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <Close />
-      <img src={newHeaderLogo} alt={'O.P. Veterans'} />
+      <img src={newHeaderLogo}  alt={'O.P. Veterans'} />
       <UserIcon />
     </HeaderContainer>
   );
