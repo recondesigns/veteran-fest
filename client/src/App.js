@@ -1,10 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { AppStateContext } from './providers/Store'
-// import { AdminView } from './components/AdminView'
-// import { VendorView } from './components/VendorView'
-import { Playground } from './components/Playground'
-
+import { Display } from './components/Display'
 
 const AppContainer = styled.div`
   box-sizing: border-box;
@@ -19,9 +16,7 @@ export default function App() {
   
   return (
     <AppContainer>
-      {/* <AdminView /> */}
-      <Playground />
-
+      <Display />
     </AppContainer>
   )
 }
