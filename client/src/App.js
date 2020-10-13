@@ -15,7 +15,7 @@ const AppContainer = styled.div`
 
 export default function App() {
   const [appState] = useContext(AppStateContext)
-  console.log(appState)
+  console.log('FROM App.js: ', appState)
   
   return (
     <AppContainer>

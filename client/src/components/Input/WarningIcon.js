@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import warningIcon from '../../assets/icons/input-warning-icon.svg'
 
 const WarningIconContainer = styled.div`
+    margin: 0px 0px 0px 16px;
     border: 1px dotted blue;
 `
 

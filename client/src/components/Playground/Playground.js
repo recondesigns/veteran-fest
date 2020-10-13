@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import { StatusMessage } from '../StatusMessage'
 import { Header } from '../Header'
+import { Input } from '../Input'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -78,6 +79,25 @@ export default function Playground() {
 
             <h3>'Component does not require props.'</h3>
             <Header />
+            {/* END OF COPY FOR EACH NEW COMPONENT */}
+
+            {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
+            {/* INPUT COMPONENT */}
+            <h2>Input</h2>
+            <h4>Props</h4>
+
+            <h3>'default'</h3>
+            <Input status={'default'} label={'Label'} />
+
+            <h3>'active'</h3>
+            <Input status={'active'} label={'Label'} />
+
+            <h3>'warning'</h3>
+            <Input status={'warning'} label={'Label'} />
+
+            <h3>'disabled'</h3>
+            <Input status={'disabled'} label={'Label'} />
+
             {/* END OF COPY FOR EACH NEW COMPONENT */}
 
         </PlaygroundContainer>
