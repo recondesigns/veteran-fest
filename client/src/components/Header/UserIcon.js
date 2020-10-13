@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import avatar from '../../assets/icons/avatar-icon.svg'
 
 const IconContainer = styled.div`
-    margin: 0px 10px 0px 16px;
-    height: 24px;
+    margin: 0px 16px 0px 16px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
