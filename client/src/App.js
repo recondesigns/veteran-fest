@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { AppStateContext } from './providers/Store'
 import { Display } from './components/Display'
 
 const AppContainer = styled.div`
@@ -11,8 +10,6 @@ const AppContainer = styled.div`
 `
 
 export default function App() {
-  const [appState] = useContext(AppStateContext)
-  console.log('FROM App.js: ', appState)
   
   return (
     <AppContainer>

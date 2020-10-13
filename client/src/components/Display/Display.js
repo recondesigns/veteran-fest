@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppStateContext } from '../../providers/Store'
 
 const DisplayContainer = styled.div`
     box-sizing: border-box;
@@ -9,6 +10,8 @@ const DisplayContainer = styled.div`
 `
 
 export default function Display() {
+    const [appState] = useContext(AppStateContext)
+    console.log(appState)
     return (
         <DisplayContainer>
             <p>Display Component</p>
