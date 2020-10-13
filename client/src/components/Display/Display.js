@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { AppStateContext } from '../../providers/Store'
+import { setDisplay } from './utils'
 import Login from './Login'
 import AdminView from './AdminView'
 import VendorView from './VendorView'
@@ -17,20 +18,8 @@ export default function Display() {
     const { userLoggedIn,  currentUser} = appState
     const { userDetails } = currentUser
     const { isAdmin } = userDetails
-    console.log(isAdmin)
-    
 
-    function setDisplay(loggedInStatus) {
-        if (loggedInStatus === false) {
-            return <Login />
-        } else if (loggedInStatus === true && isAdmin === true) {
-            return <AdminView />
-        } else if (loggedInStatus === true && isAdmin === false) {
-            return <VendorView />
-        }  
-    }
-
-    let display = setDisplay(userLoggedIn)
+    let display = setDisplay(userLoggedIn, isAdmin, <Login />, <AdminView />, <VendorView />)
 
     return (
         <DisplayContainer>
