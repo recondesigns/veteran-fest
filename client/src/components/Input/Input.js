@@ -4,13 +4,19 @@ import WarningIcon from './WarningIcon'
 import { setInputStatus } from './utils'
 
 const InputContainer = styled.div`
-    width: 312px;
+    box-sizing: border-box;
+    /* width: 312px; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 8px 8px 8px 8px;
     border-radius: 4px;
     opacity: ${props => props.opacity};
+
+    @media (min-width: 768px) {
+       width: 408px;
+    }
 `
 
 const LabelText = styled.p`
@@ -25,6 +31,7 @@ const LabelText = styled.p`
     align-items: center;
     letter-spacing: 0.02em;
     color: #545454;
+    /* border: 1px solid lightgreen; */
 `
 
 const Wrapper = styled.div`
@@ -35,6 +42,7 @@ const Wrapper = styled.div`
 `
 
 const StyledInput = styled.input`
+    box-sizing: border-box;
     margin: 4px 0px 4px 0px;
     padding: 0px 0px 0px 0px;
     width: 100%;
@@ -65,6 +73,8 @@ const HelperText = styled.p`
     align-items: center;
     letter-spacing: 0.02em;
     color: #EA7C7C;
+    /* border: 1px solid lightgreen; */
+
 `
 
 export default function Input(props) {

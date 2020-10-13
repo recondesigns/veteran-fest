@@ -23,6 +23,12 @@ const PlaygroundContainer = styled.div`
         font-weight: 800;
         /* border: 1px solid lightcoral; */
     }
+`
+
+const ComponentWrapper = styled.div`
+    box-sizing: border-box;
+    width: 312px;
+    /* border: 1px dotted lightcyan; */
 
     & > h2 {
         margin: 64px 0px 16px 0px;
@@ -47,6 +53,10 @@ const PlaygroundContainer = styled.div`
         font-weight: 600;
         text-decoration: underline;
         /* border: 1px solid dodgerblue; */
+    }
+
+    @media (min-width: 768px) {
+        width: 100%;
     }
 `
 
@@ -90,17 +100,19 @@ export default function Playground() {
             <h2>Input</h2>
             <h4>Props</h4>
 
-            <h3>'normal'</h3>
-            <Input status={'default'} label={'Label'} />
+            <ComponentWrapper>
+                <h3>'normal'</h3>
+                <Input status={'default'} label={'Label'} />
 
-            <h3>'active'</h3>
-            <Input status={'active'} label={'Label'} />
+                <h3>'active'</h3>
+                <Input status={'active'} label={'Label'} />
 
-            <h3>'warning'</h3>
-            <Input status={'warning'} label={'Label'} />
+                <h3>'warning'</h3>
+                <Input status={'warning'} label={'Label'} />
 
-            <h3>'disabled'</h3>
-            <Input status={'disabled'} label={'Label'} />
+                <h3>'disabled'</h3>
+                 <Input status={'disabled'} label={'Label'} />
+            </ComponentWrapper>
             {/* END OF COPY FOR EACH NEW COMPONENT */}
 
         </PlaygroundContainer>

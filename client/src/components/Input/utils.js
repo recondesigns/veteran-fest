@@ -4,8 +4,8 @@ export function setInputStatus(status) {
             return {
                 helperTextVisibility: 'none',
                 warningIconVisibility: 'none',
-                border: '1px solid #545454',
-                inputColor: '#545454',
+                border: '1px solid #618572',
+                inputColor: '#618572',
                 opacity: 1
             }
         case 'warning':
