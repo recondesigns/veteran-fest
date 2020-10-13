@@ -81,6 +81,10 @@ export default function Playground() {
             <Header />
             {/* END OF COPY FOR EACH NEW COMPONENT */}
 
+
+
+            
+
             {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
             {/* INPUT COMPONENT */}
             <h2>Input</h2>
@@ -97,7 +101,6 @@ export default function Playground() {
 
             <h3>'disabled'</h3>
             <Input status={'disabled'} label={'Label'} />
-
             {/* END OF COPY FOR EACH NEW COMPONENT */}
 
         </PlaygroundContainer>

@@ -11,7 +11,6 @@ const InputContainer = styled.div`
     padding: 8px 8px 8px 8px;
     border-radius: 4px;
     opacity: ${props => props.opacity};
-    /* border: 1px solid blue; */
 `
 
 const LabelText = styled.p`
@@ -26,15 +25,12 @@ const LabelText = styled.p`
     align-items: center;
     letter-spacing: 0.02em;
     color: #545454;
-    /* border: 1px solid orange; */
-
 `
 
 const Wrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 1px solid #545454; */
     border-bottom: ${props => props.borderBottom};
 `
 
@@ -45,7 +41,6 @@ const StyledInput = styled.input`
     height: 24px;
     outline: none;
     border: none;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -54,7 +49,6 @@ const StyledInput = styled.input`
     display: flex;
     align-items: center;
     letter-spacing: 0.01em;
-    /* color: #545454; */
     color: ${props => props.color};
     background: none;
 `
@@ -67,19 +61,15 @@ const HelperText = styled.p`
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
-    /* display: none; */
     display: ${props => props.display};
     align-items: center;
     letter-spacing: 0.02em;
     color: #EA7C7C;
-    /* border: 1px solid green; */
-
 `
 
 export default function Input(props) {
     const { status, label } = props
     const { helperTextVisibility, warningIconVisibility, border, inputColor, opacity } = setInputStatus(status)
-    console.log(opacity)
 
     return (
         <InputContainer opacity={opacity}>
