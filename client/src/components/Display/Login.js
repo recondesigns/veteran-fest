@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Input } from '../Input'
-import { Button } from '../Button'
 
 const LoginContainer = styled.div`
     /* width: 100%; */
@@ -15,7 +14,7 @@ const LeftPane = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
 
     & > p {
         margin: 0px;
@@ -44,9 +43,14 @@ const LeftPane = styled.div`
 const RightPane = styled.div`
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     background: lightblue;
-`
 
+    & > h3 {
+        margin: 0px;
+    }
+`
 
 export default function Login() {
     return (
@@ -56,11 +60,9 @@ export default function Login() {
                 <h3>Create an account</h3>
                 <Input status={'default'} label={'Email'} />
                 <Input status={'default'} label={'Password'} />
-                <Button>Button</Button>
-                <Button>Button</Button>
             </LeftPane>
             <RightPane>
-                <Input status={'defaualt'} label={'Noooo'} />
+                <h3>Right Pane</h3>
             </RightPane>
         </LoginContainer>
     )

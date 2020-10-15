@@ -27,8 +27,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function Button(props) {
-
+export default function Button() {
 
   return <StyledButton>{'Sign up'}  </StyledButton>;
 }
