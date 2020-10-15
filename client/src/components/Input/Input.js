@@ -4,6 +4,7 @@ import WarningIcon from './WarningIcon'
 import { setInputStatus } from './utils'
 
 const InputContainer = styled.div`
+    margin-top: ${props => props.marginTop};
     box-sizing: border-box;
     /* width: 312px; */
     width: 100%;
@@ -75,11 +76,11 @@ const HelperText = styled.p`
 `
 
 export default function Input(props) {
-    const { status, label } = props
+    const { status, label, marginTop } = props
     const { helperTextVisibility, warningIconVisibility, border, inputColor, opacity } = setInputStatus(status)
 
     return (
-        <InputContainer opacity={opacity}>
+        <InputContainer opacity={opacity} marginTop={marginTop}>
             <LabelText>{label}</LabelText>
             <Wrapper borderBottom={border}>
                 <StyledInput color={inputColor} />

@@ -1,23 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Input } from '../Input'
+import { Button } from '../Button'
 
 const LoginContainer = styled.div`
     /* width: 100%; */
     height: 100%;
     display: flex;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 `
 
 const LeftPane = styled.div`
+    box-sizing: border-box;
     width: 520px;
     height: 100%;
+    padding: 0px 32px 0px 32px;
     display: flex;
     flex-direction: column;
     /* border: 1px dotted blue; */
 
     & > p {
-        margin: 0px;
+        margin: 120px 0px 0px 0px;
         width: 100%;
         font-family: Open Sans;
         font-style: normal;
@@ -29,7 +32,7 @@ const LeftPane = styled.div`
     }
 
     & > h3 {
-        margin: 0px;
+        margin: 8px 0px 0px 0px;
         font-family: Helvetica Neue;
         font-style: normal;
         font-weight: bold;
@@ -46,6 +49,7 @@ const RightPane = styled.div`
     display: flex;
     flex-direction: column;
     background: lightblue;
+    opacity: 0.5;
 
     & > h3 {
         margin: 0px;
@@ -58,8 +62,10 @@ export default function Login() {
             <LeftPane>
                 <p>Register with OP Veteran</p>
                 <h3>Create an account</h3>
-                <Input status={'default'} label={'Email'} />
-                <Input status={'default'} label={'Password'} />
+                <Input status={'default'} label={'Email'} marginTop={'64px'} />
+                <Input status={'default'} label={'Password'} marginTop={'20px'} />
+                <Button buttonStyle={'primary'} marginTop={'56px'}>Sign Up</Button>
+                <Button buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
             </LeftPane>
             <RightPane>
                 <h3>Right Pane</h3>

@@ -10,10 +10,16 @@ box-sizing: border-box;
   margin: none;
   padding: 10px 16px 10px 16px;
   width: 100%;
-  min-height: 64px;
+  height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  & > img {
+    height: 40px;
+  }
+
+
   @media (min-width: 768px) {
     min-height: 72px;
   }

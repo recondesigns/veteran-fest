@@ -5,7 +5,8 @@ import { setButtonStyle } from "./utils";
 import googleIcon from "../../assets/icons/google-icon.svg";
 
 const StyledButton = styled.button`
-  border-sizing: border-box;
+  /* border-sizing: border-box; */
+  margin-top: ${props => props.marginTop};
   width: 312px;
   height: 40px;
   background: ${props => props.background};
@@ -42,11 +43,11 @@ const GoogleContainer = styled.div`
 `;
 
 export default function Button(props) {
-  const { buttonStyle, onClick } = props;
+  const { buttonStyle, onClick, marginTop } = props;
   const { color, background, border, display } = setButtonStyle(buttonStyle);
 
   return (
-    <StyledButton
+    <StyledButton marginTop={marginTop}
       background={background}
       color={color}
       border={border}
