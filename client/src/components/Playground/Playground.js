@@ -63,6 +63,10 @@ const ComponentWrapper = styled.div`
 `
 
 export default function Playground() {
+    function onClick() {
+        console.log('ERIK FLORES')
+    }
+
     return (
         <PlaygroundContainer>
             <h1>Comoponent Playground</h1>
@@ -140,7 +144,7 @@ export default function Playground() {
             {/* EDIT SHEET COMPONENT */}
             <h2>Button</h2>
             <h4>Props</h4>
-            <Button />
+            <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
 
         </PlaygroundContainer>
     )
