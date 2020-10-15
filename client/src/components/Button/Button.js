@@ -37,7 +37,7 @@ const GoogleContainer = styled.div`
   display: ${props => props.display};
   
   & > p {
-    margin-right 8px;
+    margin-right: 8px;
   }
 `;
 
@@ -55,7 +55,7 @@ export default function Button(props) {
       <p>{'Sign up'}</p>
       <GoogleContainer display={display}>
         <p>with</p>
-        <img src={googleIcon}/>
+        <img src={googleIcon} alt={'Sign in using Google'}/>
       </GoogleContainer>
     </StyledButton>
   );
