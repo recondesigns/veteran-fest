@@ -8,6 +8,7 @@ import { Header } from '../Header'
 import { Input } from '../Input'
 import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
+import {Card } from '../Card'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -64,7 +65,7 @@ const ComponentWrapper = styled.div`
 
 export default function Playground() {
     function onClick() {
-        console.log('ERIK FLORES')
+
     }
 
     return (
@@ -145,6 +146,14 @@ export default function Playground() {
             <h2>Button</h2>
             <h4>Props</h4>
             <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
+
+
+            {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
+            {/* EDIT SHEET COMPONENT */}
+
+            <h2>Card</h2>
+            <h4>Props</h4>
+            <Card />
 
         </PlaygroundContainer>
     )
