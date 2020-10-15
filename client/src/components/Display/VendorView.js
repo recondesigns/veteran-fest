@@ -2,20 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const VendorViewContainer = styled.div`
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border: 4px solid dodgerblue;
-
-    & > p {
-        margin: 0px;
-    }
+    border: 2px dashed purple;
 `
 
 export default function VendorView() {
     return (
         <VendorViewContainer>
-            <p>Vendor View</p>
+            <p>VendorView Component</p>
         </VendorViewContainer>
     )
 }

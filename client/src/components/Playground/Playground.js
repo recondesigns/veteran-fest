@@ -30,7 +30,7 @@ const PlaygroundContainer = styled.div`
 const ComponentWrapper = styled.div`
     box-sizing: border-box;
     width: 312px;
-    border: 1px dotted lightcyan;
+    /* border: 1px dotted lightcyan; */
 
     & > h2 {
         margin: 64px 0px 16px 0px;
