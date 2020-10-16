@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { AppStateContext } from '../../providers/Store'
+import { dummyUserAccounts } from '../../test-users'
 import { Input } from '../Input'
 import { Button } from '../Button'
 
@@ -62,7 +63,7 @@ export default function Login() {
     const [loginState, setLoginState] = useState({ email: '', password: ''})
     const { email, password } = loginState
 
-    // console.log(appState, loginState)
+    console.log(dummyUserAccounts)
 
     function getEmail(e) {
         const { value } = e.target
