@@ -76,14 +76,14 @@ const HelperText = styled.p`
 `
 
 export default function Input(props) {
-    const { status, label, marginTop } = props
+    const { status, label, marginTop, onChange, onBlur } = props
     const { helperTextVisibility, warningIconVisibility, border, inputColor, opacity } = setInputStatus(status)
-
+    
     return (
         <InputContainer opacity={opacity} marginTop={marginTop}>
             <LabelText>{label}</LabelText>
             <Wrapper borderBottom={border}>
-                <StyledInput color={inputColor} />
+                <StyledInput color={inputColor} onChange={onChange} onBlur={onBlur} />
                 <WarningIcon display={warningIconVisibility} />
             </Wrapper>
             <HelperText display={helperTextVisibility}>Helper Text</HelperText>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Input } from '../Input'
 import { Button } from '../Button'
@@ -48,7 +48,7 @@ const RightPane = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background: lightblue; */
+    background: lightblue;
     opacity: 0.5;
 
     & > h3 {
@@ -57,13 +57,28 @@ const RightPane = styled.div`
 `
 
 export default function Login() {
+    const [loginState, setLoginState] = useState({ email: '', password: ''})
+    const { email, password } = loginState
+
+    function setEmail(e) {
+        const { value } = e.target
+        setLoginState({ email: value, password: password })
+    }
+
+    function setPassword(e) {
+        const { value } = e.target
+        setLoginState({ email: email, password: value })
+    }
+
+    console.log(loginState)
+
     return (
         <LoginContainer>
             <LeftPane>
                 <p>Register with OP Veteran</p>
                 <h3>Create an account</h3>
-                <Input status={'default'} label={'Email'} marginTop={'64px'} />
-                <Input status={'default'} label={'Password'} marginTop={'20px'} />
+                <Input status={'default'} label={'Email'} marginTop={'64px'} onBlur={setEmail} />
+                <Input status={'default'} label={'Password'} marginTop={'20px'} onBlur={setPassword} />
                 <Button buttonStyle={'primary'} marginTop={'56px'}>Sign Up</Button>
                 <Button buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
             </LeftPane>
