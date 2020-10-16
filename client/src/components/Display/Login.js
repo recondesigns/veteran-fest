@@ -62,7 +62,7 @@ export default function Login() {
     const [loginState, setLoginState] = useState({ email: '', password: ''})
     const { email, password } = loginState
 
-    console.log(appState, loginState)
+    // console.log(appState, loginState)
 
     function getEmail(e) {
         const { value } = e.target
@@ -78,9 +78,6 @@ export default function Login() {
         console.log(loginState)
     }
 
-    createAccount()
-
-
     return (
         <LoginContainer>
             <LeftPane>
@@ -88,7 +85,7 @@ export default function Login() {
                 <h3>Create an account</h3>
                 <Input status={'default'} label={'Email'} marginTop={'64px'} onBlur={getEmail} />
                 <Input status={'default'} label={'Password'} marginTop={'20px'} onBlur={getPassword} />
-                <Button buttonStyle={'primary'} marginTop={'56px'}>Sign Up</Button>
+                <Button buttonStyle={'primary'} marginTop={'56px'} onClick={createAccount}>Sign Up</Button>
                 <Button buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
             </LeftPane>
             <RightPane>
