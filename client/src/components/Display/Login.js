@@ -63,7 +63,7 @@ const RightPane = styled.div`
 `
 
 export default function Login() {
-    const [appState, setAppState] = useContext(AppStateContext)
+    const [,setAppState] = useContext(AppStateContext)
     const [loginState, setLoginState] = useState({ email: '', password: ''})
     const { email, password } = loginState
 

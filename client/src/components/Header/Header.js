@@ -34,6 +34,7 @@ box-sizing: border-box;
 // `;
 
 export default function Header() {
+ 
   return (
     <HeaderContainer>
       <Close />

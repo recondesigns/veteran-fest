@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { AppStateContext } from '../../providers/Store'
 import closeIcon from "../../assets/icons/Vector.svg";
 
 const CloseContainer = styled.div`
@@ -22,11 +23,48 @@ const ExitIcon = styled.div`
 `;
 
 export default function Close() {
+  const [, setAppState] = useContext(AppStateContext)
+
+  function logOut() {
+    setAppState({
+      userLoggedIn: false,
+      isLoading: false,
+      currentUser: {
+          userDetails: {
+          firstName: '',
+          lastName: '',
+          userPhone: '',
+          userEmail: '',
+          isAdmin: false
+          },
+          vendorDetails: {
+              vendorName: '',
+              vendorDescription: '',
+              vendorAddress: '',
+              vendorAptSuite: '',
+              vendorCity: '',
+              vendorState: '',
+              vendorZipcode: '',
+              veteranOwned: false,
+              nonProfitVendor: false,
+              sponsorshipLevel: ''
+          },
+          eventDetails: {
+              registrationComplete: false,
+              paymentComplete: false,
+              booth: {
+                  boothNumber: '',
+                  powered: ''
+              }
+          }
+      }
+    })
+  }
   return (
-<CloseContainer>
-    <ExitIcon>
-        <img src={closeIcon} alt={'Exit'} />
-    </ExitIcon>
-</CloseContainer>
+    <CloseContainer onClick={logOut}>
+        <ExitIcon>
+            <img src={closeIcon} alt={'Exit'} />
+        </ExitIcon>
+    </CloseContainer>
   )
 }

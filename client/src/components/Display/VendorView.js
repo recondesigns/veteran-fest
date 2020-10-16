@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const VendorViewContainer = styled.div`
-    border: 2px dashed purple;
+    /* border: 2px dashed purple; */
 `
 
 export default function VendorView() {
