@@ -48,7 +48,7 @@ const RightPane = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: lightblue;
+    /* background: lightblue; */
     opacity: 0.5;
 
     & > h3 {
