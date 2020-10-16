@@ -5,6 +5,7 @@ export const dummyUserAccounts = [
             lastName: 'Katona',
             userPhone: '512-555-1212',
             userEmail: 'denny@email.com',
+            password: '1234',
             isAdmin: true
         },
         vendorDetails: {
@@ -34,6 +35,7 @@ export const dummyUserAccounts = [
             lastName: 'Cholula',
             userPhone: '512-555-1212',
             userEmail: 'jessica@email.com',
+            password: '1234',
             isAdmin: true
         },
         vendorDetails: {
@@ -63,6 +65,7 @@ export const dummyUserAccounts = [
             lastName: 'Sweeps',
             userPhone: '512-555-1212',
             userEmail: 'barry@email.com',
+            password: '1234',
             isAdmin: false
         },
         vendorDetails: {
@@ -92,6 +95,7 @@ export const dummyUserAccounts = [
             lastName: 'Corvette',
             userPhone: '512-555-1212',
             userEmail: 'carl@email.com',
+            password: '1234',
             isAdmin: false
         },
         vendorDetails: {
@@ -121,6 +125,7 @@ export const dummyUserAccounts = [
             lastName: 'Woods',
             userPhone: '512-555-1212',
             userEmail: 'betty@email.com',
+            password: '1234',
             isAdmin: false
         },
         vendorDetails: {

@@ -78,7 +78,17 @@ export default function Login() {
     function checkForUser() {
         dummyUserAccounts.forEach(user => {
             const { userEmail } = user.userDetails
-            console.log(userEmail)
+            const { email } = loginState
+
+            if (email === userEmail) {
+                console.log(`User already exists! Send to Dashboard through loggin in process.`)
+            } else {
+                // create account on db
+                // have currentUser in appState updated with user details saved on db
+                // take user to dashboard (probably will just come from props or state change)
+                console.log(`User did not match in database. Create account on database.`)
+            }
+            // console.log(userEmail, email)
         })
     }
 
