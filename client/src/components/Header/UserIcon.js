@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppStateContext } from '../../providers/Store'
 import avatar from '../../assets/icons/avatar-icon.svg'
 
 const IconContainer = styled.div`
@@ -18,8 +19,45 @@ const IconContainer = styled.div`
 
 
 export default function UserIcon() {
+    const [, setAppState] = useContext(AppStateContext)
+
+    function onClick() {
+        setAppState({
+            userLoggedIn: false,
+            isLoading: false,
+            currentUser: {
+                userDetails: {
+                firstName: '',
+                lastName: '',
+                userPhone: '',
+                userEmail: '',
+                isAdmin: false
+                },
+                vendorDetails: {
+                    vendorName: '',
+                    vendorDescription: '',
+                    vendorAddress: '',
+                    vendorAptSuite: '',
+                    vendorCity: '',
+                    vendorState: '',
+                    vendorZipcode: '',
+                    veteranOwned: false,
+                    nonProfitVendor: false,
+                    sponsorshipLevel: ''
+                },
+                eventDetails: {
+                    registrationComplete: false,
+                    paymentComplete: false,
+                    booth: {
+                        boothNumber: '',
+                        powered: ''
+                    }
+                }
+            }
+        })
+    }
     return (
-        <IconContainer>
+        <IconContainer onClick={onClick}>
             <img src={avatar} alt={'My Account'} />
         </IconContainer>
     )
