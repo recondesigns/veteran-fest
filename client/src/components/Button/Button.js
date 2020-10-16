@@ -10,8 +10,7 @@ const StyledButton = styled.button`
   height: 40px;
   background: ${props => props.background};
   border: ${props => props.border};
-  box-shadow: 0px 2px 4px rgba(97, 133, 114, 0.14),
-    0px 3px 4px rgba(97, 133, 114, 0.12), 0px 1px 5px rgba(97, 133, 114, 0.2);
+  box-shadow: $props => props.boxShadow};
   border-radius: 4px;
   font-family: Open Sans;
   font-style: normal;
@@ -28,35 +27,63 @@ const StyledButton = styled.button`
     box-shadow: 0px 8px 10px rgba(97, 133, 114, 0.14),
       0px 3px 14px rgba(97, 133, 114, 0.12), 0px 4px 5px rgba(97, 133, 114, 0.2);
     border-radius: 4px;
-    
   }
 `;
 
 const GoogleContainer = styled.div`
   margin-left: 3px;
   display: ${props => props.display};
-  
+
   & > p {
     margin-right: 8px;
   }
 `;
 
+const TextButtonContainer = styled.div`
+    display: ${props => props.display};
+    align-items: center;
+`;
+
+const TextButton = styled.p`
+  background: ${props => props.background};
+  border: ${props => props.border};
+  box-shadow: ${props => props.boxShadow};
+  width: 53px;
+  height: 24px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: ${props => props.color};
+`;
+
 export default function Button(props) {
   const { buttonStyle, onClick } = props;
-  const { color, background, border, display } = setButtonStyle(buttonStyle);
+  const { color, background, border, display, boxShadow } = setButtonStyle(
+    buttonStyle
+  );
 
   return (
     <StyledButton
       background={background}
       color={color}
       border={border}
+      boxShadow={boxShadow}
       onClick={onClick}
     >
-      <p>{'Sign up'}</p>
+      <p>{"Sign up"}</p>
       <GoogleContainer display={display}>
         <p>with</p>
-        <img src={googleIcon} alt={'Sign in using Google'}/>
+        <img src={googleIcon} alt={"Sign in using Google"} />
       </GoogleContainer>
+
+      <TextButtonContainer display={display}>
+        <TextButton>
+          <p>{'Sign in'}</p>
+        </TextButton>
+      </TextButtonContainer>
     </StyledButton>
   );
 }
