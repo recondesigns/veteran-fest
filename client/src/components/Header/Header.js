@@ -37,7 +37,7 @@ export default function Header() {
   const [appState] = useContext(AppStateContext)
   const { userLoggedIn } = appState
 
-  function setIcon() {
+  function closeIconDisplay() {
     if (userLoggedIn === false) {
       return <div></div>
     } else if (userLoggedIn === true) {
@@ -45,14 +45,22 @@ export default function Header() {
     }
   }
 
-  let closeIcon = setIcon()
+  function userAvatarDisplay() {
+    if (userLoggedIn === false) {
+      return <div></div>
+    } else if (userLoggedIn === true) {
+      return <UserIcon />
+    }
+  }
 
-  console.log(closeIcon)
+  let closeIcon = closeIconDisplay()
+  let avatarIcon = userAvatarDisplay()
+
   return (
     <HeaderContainer>
       {closeIcon}
       <img src={newHeaderLogo}  alt={'O.P. Veterans'} />
-      <UserIcon />
+      {avatarIcon}
     </HeaderContainer>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { AppStateContext } from '../../providers/Store'
 import avatar from '../../assets/icons/avatar-icon.svg'
 
 const IconContainer = styled.div`
@@ -21,9 +20,6 @@ const IconContainer = styled.div`
 `
 
 export default function UserIcon() {
-    
-    // const [, setAppState] = useContext(AppStateContext)
-
     return (
         <IconContainer>
             <img src={avatar} alt={'My Account'} />
