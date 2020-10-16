@@ -11,6 +11,7 @@ export default function Store({ children }) {
                 firstName: '',
                 lastName: '',
                 userPhone: '',
+                userEmail: '',
                 isAdmin: false
             },
             vendorDetails: {

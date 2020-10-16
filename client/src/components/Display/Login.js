@@ -63,7 +63,7 @@ export default function Login() {
     const [loginState, setLoginState] = useState({ email: '', password: ''})
     const { email, password } = loginState
 
-    console.log(dummyUserAccounts)
+    // console.log(dummyUserAccounts)
 
     function getEmail(e) {
         const { value } = e.target
@@ -75,8 +75,16 @@ export default function Login() {
         setLoginState({ email: email, password: value })
     }
 
+    function checkForUser() {
+        dummyUserAccounts.forEach(user => {
+            const { userEmail } = user.userDetails
+            console.log(userEmail)
+        })
+    }
+
     function createAccount() {
-        console.log(loginState)
+        checkForUser()
+        // console.log(loginState)
     }
 
     return (
