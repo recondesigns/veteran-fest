@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { AppStateContext } from '../../providers/Store'
 import UserIcon from "./UserIcon";
 import Close from './Close'
 import newHeaderLogo from "../../assets/images/vetfest-logo.png";
@@ -19,7 +20,6 @@ box-sizing: border-box;
     height: 40px;
   }
 
-
   @media (min-width: 768px) {
     min-height: 72px;
   }
@@ -34,10 +34,23 @@ box-sizing: border-box;
 // `;
 
 export default function Header() {
- 
+  const [appState] = useContext(AppStateContext)
+  const { userLoggedIn } = appState
+
+  function setIcon() {
+    if (userLoggedIn === false) {
+      return <div></div>
+    } else if (userLoggedIn === true) {
+      return <Close />
+    }
+  }
+
+  let closeIcon = setIcon()
+
+  console.log(closeIcon)
   return (
     <HeaderContainer>
-      <Close />
+      {closeIcon}
       <img src={newHeaderLogo}  alt={'O.P. Veterans'} />
       <UserIcon />
     </HeaderContainer>
