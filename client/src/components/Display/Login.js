@@ -48,13 +48,17 @@ const LeftPane = styled.div`
 const RightPane = styled.div`
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     background: lightblue;
     opacity: 0.5;
 
     & > h3 {
         margin: 0px;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
     }
 `
 
