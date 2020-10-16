@@ -59,11 +59,9 @@ const RightPane = styled.div`
 `
 
 export default function Login() {
-    const [appState] = useContext(AppStateContext)
+    const [appState, setAppState] = useContext(AppStateContext)
     const [loginState, setLoginState] = useState({ email: '', password: ''})
     const { email, password } = loginState
-
-    // console.log(dummyUserAccounts)
 
     function getEmail(e) {
         const { value } = e.target
@@ -77,18 +75,51 @@ export default function Login() {
 
     function checkForUser() {
         dummyUserAccounts.forEach(user => {
-            const { userEmail } = user.userDetails
-            const { email } = loginState
+            const { userEmail, userPassword, firstName, lastName, userPhone, isAdmin } = user.userDetails
+            const { vendorName, vendorDescription, vendorAddress, vendorAptSuite, vendorCity, vendorState, vendorZipcode, veteranOwned, nonProfitVendor, sponsorshipLevel } = user.vendorDetails
+            const {isRegistrationComplete, isPaymentComplete, booth } = user.eventDetails
+            const { email, password } = loginState
 
-            if (email === userEmail) {
-                console.log(`User already exists! Send to Dashboard through loggin in process.`)
+            if (email === userEmail && password === userPassword) {
+                setAppState({
+                    userLoggedIn: true,
+                    isLoading: false,
+                    currentUser: {
+                        userDetails: {
+                        firstName: firstName,
+                        lastName: lastName,
+                        userPhone: userPhone,
+                        userEmail: userEmail,
+                        isAdmin: isAdmin
+                        },
+                        vendorDetails: {
+                            vendorName: vendorName,
+                            vendorDescription: vendorDescription,
+                            vendorAddress: vendorAddress,
+                            vendorAptSuite: vendorAptSuite,
+                            vendorCity: vendorCity,
+                            vendorState: vendorState,
+                            vendorZipcode: vendorZipcode,
+                            veteranOwned: veteranOwned,
+                            nonProfitVendor: nonProfitVendor,
+                            sponsorshipLevel: sponsorshipLevel
+                        },
+                        eventDetails: {
+                            registrationComplete: isRegistrationComplete,
+                            paymentComplete: isPaymentComplete,
+                            booth: {
+                                boothNumber: booth.boothNumber,
+                                powered: booth.powered
+                            }
+                        }
+                    }
+                })
             } else {
                 // create account on db
                 // have currentUser in appState updated with user details saved on db
                 // take user to dashboard (probably will just come from props or state change)
-                console.log(`User did not match in database. Create account on database.`)
+                // console.log(`Either no account, or wrong password.`)
             }
-            // console.log(userEmail, email)
         })
     }
 
