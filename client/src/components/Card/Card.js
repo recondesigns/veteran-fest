@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CheckMarkIcon from "./CheckMarkIcon";
 
 const CardContainer = styled.div`
   box-sizing: border-box;
@@ -29,7 +30,7 @@ const CardTitle = styled.h5`
 const CardText = styled.p`
   box-sizing: border-box;
   width: 311px;
-  height: 32px; 
+  height: 32px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 300;
@@ -57,7 +58,8 @@ export default function Card() {
   return (
     <CardContainer>
       <CardTitle>{"Card Title"}</CardTitle>
-      <CardText>{"Whatever"}</CardText>
+      <CheckMarkIcon />
+      <CardText>{"Card Text"}</CardText>
       <ButtonText>{"Update"}</ButtonText>
     </CardContainer>
   );
