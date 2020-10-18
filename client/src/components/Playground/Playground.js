@@ -64,6 +64,7 @@ const ComponentWrapper = styled.div`
 `
 
 export default function Playground() {
+
     function onClick() {
         console.log('ERIK FLORES')
     }
