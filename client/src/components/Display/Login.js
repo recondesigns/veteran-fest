@@ -5,6 +5,8 @@ import { dummyUserAccounts } from '../../test-users'
 import { Input } from '../Input'
 import { Button } from '../Button'
 
+import image1 from '../../assets/images/vetfest01-500px.jpg'
+
 const LoginContainer = styled.div`
     /* width: 100%; */
     height: 100%;
@@ -51,10 +53,15 @@ const RightPane = styled.div`
     display: none;
     flex-direction: column;
     background: lightblue;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 
     & > h3 {
         margin: 0px;
+    }
+
+    & > img {
+        width: 500px;
+        /* height: 100px; */
     }
 
     @media (min-width: 768px) {
@@ -144,6 +151,7 @@ export default function Login() {
             </LeftPane>
             <RightPane>
                 <h3>Right Pane</h3>
+                <img src={image1} alt={'hello'} />
             </RightPane>
         </LoginContainer>
     )
