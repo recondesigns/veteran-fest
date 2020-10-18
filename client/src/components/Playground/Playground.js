@@ -151,7 +151,7 @@ export default function Playground() {
             {/* EDIT SHEET COMPONENT */}
             <h2>ProgressBar Item</h2>
             <h4>Props</h4>
-            <ProgressBar />
+            <ProgressBar step={1} />
 
 
         </PlaygroundContainer>

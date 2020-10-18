@@ -4,7 +4,7 @@ import { setBarItem } from './utils'
 
 const BarItemContainer = styled.div`
     width: 125px;
-    max-height: 40px;
+    /* max-height: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;
