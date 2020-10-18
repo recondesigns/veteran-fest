@@ -5,8 +5,6 @@ import { dummyUserAccounts } from '../../test-users'
 import { Input } from '../Input'
 import { Button } from '../Button'
 
-import image1 from '../../assets/images/vetfest01-500px.jpg'
-
 const LoginContainer = styled.div`
     /* width: 100%; */
     height: 100%;
@@ -151,7 +149,6 @@ export default function Login() {
             </LeftPane>
             <RightPane>
                 <h3>Right Pane</h3>
-                <img src={image1} alt={'hello'} />
             </RightPane>
         </LoginContainer>
     )
