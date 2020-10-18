@@ -6,7 +6,8 @@ export const dummyUserAccounts = [
             userPhone: '512-555-1212',
             userEmail: 'denny@email.com',
             userPassword: '1234',
-            isAdmin: true
+            isAdmin: true,
+            formProgressStep: 3
         },
         vendorDetails: {
             vendorName: 'O.P. Veteran',
@@ -36,7 +37,8 @@ export const dummyUserAccounts = [
             userPhone: '512-555-1212',
             userEmail: 'jessica@email.com',
             userPassword: '1234',
-            isAdmin: true
+            isAdmin: true,
+            formProgressStep: 2
         },
         vendorDetails: {
             vendorName: 'O.P. Veteran',
@@ -66,7 +68,8 @@ export const dummyUserAccounts = [
             userPhone: '512-555-1212',
             userEmail: 'barry@email.com',
             userPassword: '1234',
-            isAdmin: false
+            isAdmin: false,
+            formProgressStep: 2
         },
         vendorDetails: {
             vendorName: 'Bunty Soap',
@@ -96,7 +99,8 @@ export const dummyUserAccounts = [
             userPhone: '512-555-1212',
             userEmail: 'carl@email.com',
             userPassword: '1234',
-            isAdmin: false
+            isAdmin: false,
+            formProgressStep: 1
         },
         vendorDetails: {
             vendorName: 'Spray Washers',
@@ -126,7 +130,8 @@ export const dummyUserAccounts = [
             userPhone: '512-555-1212',
             userEmail: 'betty@email.com',
             userPassword: '1234',
-            isAdmin: false
+            isAdmin: false,
+            formProgressStep: 3
         },
         vendorDetails: {
             vendorName: 'Cookie Company',

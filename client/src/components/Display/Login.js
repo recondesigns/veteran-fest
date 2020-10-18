@@ -79,7 +79,7 @@ export default function Login() {
 
     function checkForUser() {
         dummyUserAccounts.forEach(user => {
-            const { userEmail, userPassword, firstName, lastName, userPhone, isAdmin } = user.userDetails
+            const { userEmail, userPassword, firstName, lastName, userPhone, isAdmin, formProgressStep } = user.userDetails
             const { vendorName, vendorDescription, vendorAddress, vendorAptSuite, vendorCity, vendorState, vendorZipcode, veteranOwned, nonProfitVendor, sponsorshipLevel } = user.vendorDetails
             const {isRegistrationComplete, isPaymentComplete, booth } = user.eventDetails
             const { email, password } = loginState
@@ -94,7 +94,8 @@ export default function Login() {
                         lastName: lastName,
                         userPhone: userPhone,
                         userEmail: userEmail,
-                        isAdmin: isAdmin
+                        isAdmin: isAdmin,
+                        formProgressStep: formProgressStep
                         },
                         vendorDetails: {
                             vendorName: vendorName,
@@ -129,7 +130,6 @@ export default function Login() {
 
     function createAccount() {
         checkForUser()
-        // console.log(loginState)
     }
 
     return (

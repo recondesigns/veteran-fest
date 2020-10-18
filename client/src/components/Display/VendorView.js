@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppStateContext } from '../../providers/Store'
 import { StatusMessage } from '../StatusMessage'
 import { ProgressBar } from '../ProgressBar'
 
@@ -26,9 +27,13 @@ const BodyText = styled.p`
 `
 
 export default function VendorView() {
+    const [appState] = useContext(AppStateContext)
+    const { userDetails } = appState.currentUser
+    const { formProgressStep } = userDetails
+
     return (
         <VendorViewContainer>
-            <ProgressBar step={1} />
+            <ProgressBar step={formProgressStep} />
             <StatusMessage status={'success'} message={'You have created an account.'} />
             <ContentWrapper>
                 <BodyText>Please complete the following:</BodyText>
