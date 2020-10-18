@@ -4,16 +4,16 @@ import BarItem from './BarItem'
 
 const ProgressBarContainer = styled.div`
     display: flex;
-    
+
     border: 1px solid lightcoral;
 `
 
 export default function ProgressBar() {
     return (
         <ProgressBarContainer>
-            <BarItem />
-            <BarItem />
-            <BarItem />
+            <BarItem status={'inactive'} message={'Setup account'} />
+            <BarItem status={'active'} message={'Vendor info'} />
+            <BarItem status={'complete'} message={'Payment'} />
         </ProgressBarContainer>
     )
 }
