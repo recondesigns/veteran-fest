@@ -10,6 +10,10 @@ const BarItemContainer = styled.div`
     align-items: center;
     border-top: ${props => props.borderTop};
     background: #403926;
+
+    @media (min-width: 768px) {
+        width: 480px;
+    }
 `
 
 const ItemText = styled.p`
@@ -26,7 +30,7 @@ const ItemText = styled.p`
 export default function BarItem(props) {
     const { message, status } = props
     const { textColor, border } = setBarItem(status)
-    
+
     return (
         <BarItemContainer borderTop={border}>
             <ItemText color={textColor}>{message}</ItemText>
