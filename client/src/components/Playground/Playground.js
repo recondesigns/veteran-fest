@@ -146,6 +146,12 @@ export default function Playground() {
             <h4>Props</h4>
             <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
 
+            {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
+            {/* EDIT SHEET COMPONENT */}
+            <h2>ProgressBar</h2>
+            <h4>Props</h4>
+
+
         </PlaygroundContainer>
     )
 }
