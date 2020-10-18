@@ -8,6 +8,7 @@ import { Header } from '../Header'
 import { Input } from '../Input'
 import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
+import { ProgressBar } from '../ProgressBar'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -150,6 +151,7 @@ export default function Playground() {
             {/* EDIT SHEET COMPONENT */}
             <h2>ProgressBar</h2>
             <h4>Props</h4>
+            <ProgressBar />
 
 
         </PlaygroundContainer>
