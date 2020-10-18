@@ -149,7 +149,7 @@ export default function Playground() {
 
             {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}
             {/* EDIT SHEET COMPONENT */}
-            <h2>ProgressBar</h2>
+            <h2>ProgressBar Item</h2>
             <h4>Props</h4>
             <ProgressBar />
 

@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import BarItem from './BarItem'
 
-const Container = styled.div`
+const ProgressBarContainer = styled.div`
+    display: flex;
+    
     border: 1px solid lightcoral;
 `
 
 export default function ProgressBar() {
     return (
-        <Container>
-            <p>Hello World</p>
-        </Container>
+        <ProgressBarContainer>
+            <BarItem />
+            <BarItem />
+            <BarItem />
+        </ProgressBarContainer>
     )
 }
