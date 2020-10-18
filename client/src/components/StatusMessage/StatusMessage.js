@@ -5,6 +5,7 @@ import { setDisplayStatus } from './utils'
 
 const StatusMessageContainer = styled.div`
     box-sizing: border-box;
+    margin-top: 8px;
     width: 344px;
     height: 40px;
     padding: 8px 16px 8px 16px;
