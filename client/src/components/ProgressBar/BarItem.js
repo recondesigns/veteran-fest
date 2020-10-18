@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { setBarItem } from './utils'
 
 const BarItemContainer = styled.div`
     width: 125px;
@@ -7,29 +8,28 @@ const BarItemContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 8px solid #4E6A5B;
+    border-top: ${props => props.borderTop};
     background: #403926;
 `
 
 const ItemText = styled.p`
-    margin: 0px;
+    margin: 4px 0px 4px 0px;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
-    /* display: flex;
-    align-items: center; */
     letter-spacing: 0.01em;
-    color: #FFFFFF;
+    color: ${props => props.color};
 `
 
-
-
-export default function BarItem() {
+export default function BarItem(props) {
+    const { message, status } = props
+    const { textColor, border } = setBarItem(status)
+    
     return (
-        <BarItemContainer>
-            <ItemText>{'Item'}</ItemText>
+        <BarItemContainer borderTop={border}>
+            <ItemText color={textColor}>{message}</ItemText>
         </BarItemContainer>
     )
 }

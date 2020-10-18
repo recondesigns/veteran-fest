@@ -5,7 +5,7 @@ import BarItem from './BarItem'
 const ProgressBarContainer = styled.div`
     display: flex;
 
-    border: 1px solid lightcoral;
+    /* border: 1px solid lightcoral; */
 `
 
 export default function ProgressBar() {
