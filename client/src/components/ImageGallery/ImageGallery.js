@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Thumbnail from './Thumbnail'
 import MainImage from './MainImage'
 
+import { imageArr } from './utils'
+
 const ImageGalleryContainer = styled.div`
     box-sizing: border-box;
     width: 856px;
@@ -32,6 +34,17 @@ const ThumbnailWrapper = styled.div`
 `
 
 export default function ImageGallery() {
+    // console.log(imageArr)
+
+   let gallery = imageArr.map((imageObj, idx) => {
+       const { name, path } = imageObj
+    //    console.log(name, path)
+       return <Thumbnail key={idx} status={'active'} onClick={testClick} name={name} path={path} />
+   })
+
+   console.log(gallery)
+
+
     function testClick() {
         console.log('fired')
     }
@@ -40,6 +53,8 @@ export default function ImageGallery() {
         <ImageGalleryContainer>
             <Wrapper>
                 <ThumbnailWrapper>
+                    {gallery}
+                    {/* <Thumbnail status={'active'} onClick={testClick} />
                     <Thumbnail status={'active'} onClick={testClick} />
                     <Thumbnail status={'active'} onClick={testClick} />
                     <Thumbnail status={'active'} onClick={testClick} />
@@ -54,8 +69,7 @@ export default function ImageGallery() {
                     <Thumbnail status={'active'} onClick={testClick} />
                     <Thumbnail status={'active'} onClick={testClick} />
                     <Thumbnail status={'active'} onClick={testClick} />
-                    <Thumbnail status={'active'} onClick={testClick} />
-                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} /> */}
                 </ThumbnailWrapper>
             </Wrapper>
             <MainImage />
