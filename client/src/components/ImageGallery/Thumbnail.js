@@ -23,11 +23,11 @@ const ActiveBar = styled.div`
 `
 
 export default function Thumbnail(props) {
-    const { status } = props
+    const { status, onClick } = props
     const { background, opacity } = setThumbnail(status)
     
     return (
-        <ThumbnailContainer opacity={opacity}>
+        <ThumbnailContainer opacity={opacity} onClick={onClick}>
             <ActiveBar background={background} />
             <img src={vetfest1Thumbnail} alt={'thumbnail'} />
         </ThumbnailContainer>

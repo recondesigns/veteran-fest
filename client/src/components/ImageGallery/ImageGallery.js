@@ -32,26 +32,30 @@ const ThumbnailWrapper = styled.div`
 `
 
 export default function ImageGallery() {
+    function testClick() {
+        console.log('fired')
+    }
+
     return (
         <ImageGalleryContainer>
             <Wrapper>
                 <ThumbnailWrapper>
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
-                    <Thumbnail status={'active'} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
+                    <Thumbnail status={'active'} onClick={testClick} />
                 </ThumbnailWrapper>
             </Wrapper>
             <MainImage />
