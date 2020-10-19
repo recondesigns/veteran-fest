@@ -60,10 +60,8 @@ const TextButton = styled.p`
 `;
 
 export default function Button(props) {
-  const { buttonStyle, onClick } = props;
-  const { color, background, border, display, boxShadow } = setButtonStyle(
-    buttonStyle
-  );
+  const { buttonStyle, onClick, marginTop } = props;
+  const { color, background, border, display, boxShadow } = setButtonStyle(buttonStyle);
 
   return (
     <StyledButton
