@@ -11,7 +11,6 @@ const StyledButton = styled.button`
   height: 40px;
   background: ${props => props.background};
   border: ${props => props.border};
-  box-shadow: $props => props.boxShadow};
   border-radius: 4px;
   font-family: Open Sans;
   font-style: normal;
@@ -69,7 +68,6 @@ export default function Button(props) {
       background={background}
       color={color}
       border={border}
-      boxShadow={boxShadow}
       onClick={onClick}
     >
       <p>{"Sign up"}</p>
