@@ -5,8 +5,7 @@ import { setDisplay } from './utils'
 import Login from './Login'
 import AdminView from './AdminView'
 import VendorView from './VendorView'
-
-import { Playground } from '../Playground'
+// import { Playground } from '../Playground'
 
 const DisplayContainer = styled.div`
     box-sizing: border-box;
@@ -25,8 +24,8 @@ export default function Display() {
 
     return (
         <DisplayContainer>
-            {/* {display} */}
-            <Playground />
+            {display}
+            {/* <Playground /> */}
         </DisplayContainer>
     )
 }

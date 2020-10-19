@@ -4,6 +4,7 @@ import { AppStateContext } from '../../providers/Store'
 import { dummyUserAccounts } from '../../test-users'
 import { Input } from '../Input'
 import { Button } from '../Button'
+import { ImageGallery } from '../ImageGallery'
 
 const LoginContainer = styled.div`
     /* width: 100%; */
@@ -48,13 +49,22 @@ const LeftPane = styled.div`
 const RightPane = styled.div`
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
-    background: lightblue;
+    align-items: center;
+    justify-content: center;
+    background: #3C4027;
     /* opacity: 0.5; */
 
-    & > h3 {
-        margin: 0px;
+    & > h2 {
+        margin: 0px 0px 64px 0px;
+        font-family: Helvetica Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
     }
 
     & > img {
@@ -148,7 +158,8 @@ export default function Login() {
                 <Button buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
             </LeftPane>
             <RightPane>
-                <h3>Right Pane</h3>
+                <h2>View previous VetFest events.</h2>
+                <ImageGallery />
             </RightPane>
         </LoginContainer>
     )
