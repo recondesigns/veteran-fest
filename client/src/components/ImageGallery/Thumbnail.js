@@ -4,9 +4,10 @@ import { setThumbnail } from './utils'
 import vetfest1Thumbnail from '../../assets/images/vetfest01-100px.jpg'
 
 const ThumbnailContainer = styled.div`
+    margin: 24px 8px 0px 8px;
     width: 64px;
     height: 80px;
-    border: 1px dotted lightblue;
+    /* border: 1px dotted lightblue; */
 
     & > img {
         width: 64px;
