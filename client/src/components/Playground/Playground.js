@@ -10,6 +10,7 @@ import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
 import { ProgressBar } from '../ProgressBar'
 import { ImageGallery } from '../ImageGallery'
+import { AdminCard } from '../AdminCard'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -210,6 +211,14 @@ export default function Playground() {
             <h4>Props</h4>
             <ImageGallery />
             {/* END OF COPY FOR EACH NEW COMPONENT */}
+
+            {/* IMAGE GALLERY COMPONENT */}
+            <h2>Admin Card</h2>
+            <h4>Props</h4>
+            <AdminCard />
+            {/* END OF COPY FOR EACH NEW COMPONENT */}
+
+
 
 
         </PlaygroundContainer>
