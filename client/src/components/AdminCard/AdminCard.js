@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MoreIcon from './MoreIcon'
 import SaveButton from './SaveButton'
 import PoweredDisplay from './PoweredDisplay'
+import BoothDisplay from './BoothDisplay'
 
 const AdminCardContainer = styled.div`
     border: 1px solid lightcoral;
@@ -14,6 +15,7 @@ export default function AdminCard() {
             <MoreIcon />
             <SaveButton buttonText={'Save'} />
             <PoweredDisplay />
+            <BoothDisplay />
         </AdminCardContainer>
     )
 }
