@@ -3,9 +3,6 @@ import styled from "styled-components";
 import CheckMarkIcon from "./CheckMarkIcon";
 
 const CardContainer = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   box-sizing: border-box;
   background: #eaeaea;
   width: 344px;
@@ -16,8 +13,15 @@ const CardContainer = styled.div`
     0px 4px 5px rgba(0, 0, 0, 0.2);
 `;
 
+const TitleContainer = styled.div`
+  // border: solid 1px blue;
+  display: flex;
+  align-items: center;
+  margin-left:16px;
+`;
+
 const CardTitle = styled.h5`
-  border: dotted green;
+  // border: solid 1px green;
   width: 100%;
   height: 24px;
   font-family: Helvetica Neue;
@@ -27,13 +31,13 @@ const CardTitle = styled.h5`
   line-height: 24px;
   letter-spacing: 0.015em;
   color: #3a4f44;
-  margin: 0px;
-  
+   margin-bottom: 0;
+   margin-top: 16px;
+  // padding-left: 16px;
 `;
 
 const CardText = styled.p`
-  border: dotted red;
-
+  // border: solid 1px red;
   box-sizing: border-box;
   height: 32px;
   font-family: Open Sans;
@@ -42,28 +46,31 @@ const CardText = styled.p`
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  padding-top: 8px;
   color: #000000;
-  margin: 0px;
+  margin: 0 0 24px 16px;
 `;
 
 const ButtonText = styled.h6`
-  border: dotted blue;
-  // display: flex;
-  // justify-content: flex-end;
+  // border: solid 1px blue;
+  display: flex;
+  justify-content: flex-end;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #799c8a;
-  margin: 0px;
+  margin: 0 24px 12px 0;
 `;
 
 export default function Card() {
   return (
     <CardContainer>
-      <CardTitle>{"Card Title"}</CardTitle>
-      <CheckMarkIcon isComplete={true} />
+      <TitleContainer>
+        <CardTitle>{"Card Title"}</CardTitle>
+        <CheckMarkIcon isComplete={true} />
+      </TitleContainer>
       <CardText>{"Card Text"}</CardText>
       <ButtonText>{"Update"}</ButtonText>
     </CardContainer>

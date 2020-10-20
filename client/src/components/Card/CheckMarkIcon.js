@@ -3,14 +3,11 @@ import styled from "styled-components";
 import checkMark from "../../assets/icons/checkmark-complete.svg";
 
 const CheckMarkContainer = styled.div`
-  border: dotted yellow;
-  // position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  justify-content: flex-end;
+  // border: solid 1px yellow;
+  // top: 16px;
+  //  right: 16px;
   height: 13.4px;
-  margin-left: 320px;
+  margin-right: 16px;
 `;
 
 export default function CheckMarkStatus(props) {
