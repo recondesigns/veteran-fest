@@ -1,23 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 import checkMark from "../../assets/icons/checkmark-complete.svg";
-import { setDisplayCheck } from "./utils";
 
 const CheckMarkContainer = styled.div`
-  margin: 0 10px 0 0;
-  max-width: 10px;
-  max-height:10px;
-  width: 17.6px;
+  border: dotted yellow;
+  // position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: flex-end;
   height: 13.4px;
+  margin-left: 320px;
 `;
 
 export default function CheckMarkStatus(props) {
-const { status } = props
+  const { isComplete } = props;
 
-
+  function checkMarkComplete(status) {
+    if (status === true) {
+      return <img src={checkMark} alt={"Complete"} />;
+    } else {
+      return <div></div>;
+    }
+  }
+  let icon = checkMarkComplete(isComplete);
+  console.log(icon);
   return (
-      <CheckMarkContainer>
-          <img src={checkMark} alt={'Complete'} />
-      </CheckMarkContainer>
-  )
+    <CheckMarkContainer>
+      {icon}
+      {/* <img src={checkMark} /> */}
+    </CheckMarkContainer>
+  );
 }
