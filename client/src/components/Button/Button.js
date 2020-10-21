@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   height: 40px;
   background: ${props => props.background};
   border: ${props => props.border};
-  box-shadow: $props => props.boxShadow};
+  box-shadow: ${props => props.boxShadow};
   border-radius: 4px;
   font-family: Open Sans;
   font-style: normal;
@@ -39,29 +39,11 @@ const GoogleContainer = styled.div`
   }
 `;
 
-const TextButtonContainer = styled.div`
-    display: ${props => props.display};
-    align-items: center;
-`;
-
-const TextButton = styled.p`
-  background: ${props => props.background};
-  border: ${props => props.border};
-  box-shadow: ${props => props.boxShadow};
-  width: 53px;
-  height: 24px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  color: ${props => props.color};
-`;
-
 export default function Button(props) {
-  const { buttonStyle, onClick, marginTop } = props;
-  const { color, background, border, display, boxShadow } = setButtonStyle(buttonStyle);
+  const { buttonStyle, onClick } = props;
+  const { color, background, border, display, boxShadow } = setButtonStyle(
+    buttonStyle
+  );
 
   return (
     <StyledButton
@@ -76,12 +58,6 @@ export default function Button(props) {
         <p>with</p>
         <img src={googleIcon} alt={"Sign in using Google"} />
       </GoogleContainer>
-
-      <TextButtonContainer display={display}>
-        <TextButton>
-          <p>{'Sign in'}</p>
-        </TextButton>
-      </TextButtonContainer>
     </StyledButton>
   );
 }

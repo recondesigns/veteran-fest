@@ -69,7 +69,7 @@ export default function Card() {
     <CardContainer>
       <TitleContainer>
         <CardTitle>{"Card Title"}</CardTitle>
-        <CheckMarkIcon isComplete={true} />
+        <CheckMarkIcon isComplete={false} />
       </TitleContainer>
       <CardText>{"Card Text"}</CardText>
       <ButtonText>{"Update"}</ButtonText>

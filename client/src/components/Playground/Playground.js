@@ -9,6 +9,7 @@ import { Input } from '../Input'
 import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
 import {Card } from '../Card'
+import { TextButton } from '../TextButton'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -145,7 +146,8 @@ export default function Playground() {
             {/* EDIT SHEET COMPONENT */}
             <h2>Button</h2>
             <h4>Props</h4>
-            <Button onClick={onClick} buttonStyle={'text-button'}>Sign up</Button>
+            <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
+            <TextButton />
 
 
             {/* COPY THIS BLOCK FOR EACH NEW COMPONENT - BE SURE TO DISPLAY EACH STATE BY USING PROPS */}

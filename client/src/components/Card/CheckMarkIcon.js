@@ -21,11 +21,10 @@ export default function CheckMarkStatus(props) {
     }
   }
   let icon = checkMarkComplete(isComplete);
-  console.log(icon);
+  
   return (
     <CheckMarkContainer>
       {icon}
-      {/* <img src={checkMark} /> */}
     </CheckMarkContainer>
   );
 }
