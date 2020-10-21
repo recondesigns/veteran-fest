@@ -8,16 +8,22 @@ const CardContainer = styled.div`
   width: 344px;
   height: 128px;
   border-radius: 2px;
+  position: relative;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
     0px 4px 5px rgba(0, 0, 0, 0.2);
 `;
 
+const TitleContainer = styled.div`
+  // border: solid 1px blue;
+  display: flex;
+  align-items: center;
+  margin-left:16px;
+`;
+
 const CardTitle = styled.h5`
-  box-sizing: border-box;
-  width: 88px;
+  // border: solid 1px green;
+  width: 100%;
   height: 24px;
-  margin: 10px 10px 10px 10px;
-  padding-top: 4px;
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: 500;
@@ -25,11 +31,14 @@ const CardTitle = styled.h5`
   line-height: 24px;
   letter-spacing: 0.015em;
   color: #3a4f44;
+   margin-bottom: 0;
+   margin-top: 16px;
+  // padding-left: 16px;
 `;
 
 const CardText = styled.p`
+  // border: solid 1px red;
   box-sizing: border-box;
-  width: 311px;
   height: 32px;
   font-family: Open Sans;
   font-style: normal;
@@ -37,12 +46,13 @@ const CardText = styled.p`
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  margin: 0 0 0 10px;
-  padding: 10px 0 0 0;
+  padding-top: 8px;
   color: #000000;
+  margin: 0 0 24px 16px;
 `;
 
 const ButtonText = styled.h6`
+  // border: solid 1px blue;
   display: flex;
   justify-content: flex-end;
   font-family: Open Sans;
@@ -50,15 +60,17 @@ const ButtonText = styled.h6`
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin: 30px 8px 5px 8px;
   color: #799c8a;
+  margin: 0 24px 12px 0;
 `;
 
 export default function Card() {
   return (
     <CardContainer>
-      <CardTitle>{"Card Title"}</CardTitle>
-      <CheckMarkIcon />
+      <TitleContainer>
+        <CardTitle>{"Card Title"}</CardTitle>
+        <CheckMarkIcon isComplete={false} />
+      </TitleContainer>
       <CardText>{"Card Text"}</CardText>
       <ButtonText>{"Update"}</ButtonText>
     </CardContainer>

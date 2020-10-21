@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import styled from 'styled-components'
 
 // IMPORT COMPONENTS HERE
@@ -10,6 +10,8 @@ import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
 import { ProgressBar } from '../ProgressBar'
 import { ImageGallery } from '../ImageGallery'
+import {Card } from '../Card'
+import { TextButton } from '../TextButton'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -192,6 +194,8 @@ export default function Playground() {
             {/* ********** PROGRESSBAR COMPONENT */}
             <h2>ProgressBar</h2>
             <h4>Props</h4>
+            <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
+            <TextButton />
 
             <h3>'step'</h3>
             <p>Set the current step for the progress bar.</p>
