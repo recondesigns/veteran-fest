@@ -13,6 +13,7 @@ import { ImageGallery } from '../ImageGallery'
 import {Card } from '../Card'
 import { TextButton } from '../TextButton'
 
+
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
 const PlaygroundContainer = styled.div`
@@ -189,13 +190,15 @@ export default function Playground() {
 
             <p>'google-button'</p>
             <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
+
+            <p>'Sign in Button'</p>
+            <TextButton />
             {/* ********** END BUTTON COMPONENT */}
 
             {/* ********** PROGRESSBAR COMPONENT */}
             <h2>ProgressBar</h2>
             <h4>Props</h4>
-            <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
-            <TextButton />
+
 
             <h3>'step'</h3>
             <p>Set the current step for the progress bar.</p>
@@ -214,8 +217,12 @@ export default function Playground() {
             <h4>Props</h4>
             <ImageGallery />
             {/* END OF COPY FOR EACH NEW COMPONENT */}
-
-
+        
+            {/* CARD COMPONENT */}
+            <h2> Card</h2>
+            <h4>props</h4>
+            <Card />
+            {/* END OF CARD COMPONENT */}
         </PlaygroundContainer>
     )
 }

@@ -64,14 +64,15 @@ const ButtonText = styled.h6`
   margin: 0 24px 12px 0;
 `;
 
-export default function Card() {
+export default function Card(props) {
+
   return (
     <CardContainer>
       <TitleContainer>
-        <CardTitle>{"Card Title"}</CardTitle>
-        <CheckMarkIcon isComplete={false} />
+        <CardTitle>{props.cardTitle}</CardTitle>
+        <CheckMarkIcon isComplete={true} />
       </TitleContainer>
-      <CardText>{"Card Text"}</CardText>
+      <CardText>{props.cardText}</CardText>
       <ButtonText>{"Update"}</ButtonText>
     </CardContainer>
   );
