@@ -7,12 +7,3 @@ export function setDisplay(status, userType, login, admin, vendor) {
         return vendor
     }
 }
-
-// export function setCardDisplay(display) {
-//     switch (display) {
-//         case "cardTitle1":
-//         return {
-//             'Point of Contact'
-//         }
-//     }
-// }

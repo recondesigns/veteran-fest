@@ -12,7 +12,7 @@ export default function Store({ children }) {
                 lastName: '',
                 userPhone: '',
                 userEmail: '',
-                isAdmin: false,
+                isAdmin: true,
                 formProgressStep: 1
             },
             vendorDetails: {
