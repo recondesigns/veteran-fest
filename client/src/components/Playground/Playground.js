@@ -12,7 +12,6 @@ import { ProgressBar } from '../ProgressBar'
 import { ImageGallery } from '../ImageGallery'
 import {Card } from '../Card'
 import { TextButton } from '../TextButton'
-import { BoothSelection } from '../BoothSelection'
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
 
@@ -224,11 +223,6 @@ export default function Playground() {
             <Card />
             {/* END OF CARD COMPONENT */}
 
-            {/* BOOTH SELECTION COMPONENT */}
-            <h2>Booth Selection</h2>
-            <h4>props</h4>
-            <BoothSelection />
-            {/* END OF BOOTH SELCTION COMPONENT */}
         </PlaygroundContainer>
     )
 }
