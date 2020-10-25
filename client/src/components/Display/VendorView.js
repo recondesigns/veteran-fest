@@ -4,7 +4,6 @@ import { AppStateContext } from "../../providers/Store";
 import { StatusMessage } from "../StatusMessage";
 import { ProgressBar } from "../ProgressBar";
 import { Card } from "../Card";
-import { checkPropTypes } from "prop-types";
 
 const VendorViewContainer = styled.div`
   /* border: 2px dashed purple; */
