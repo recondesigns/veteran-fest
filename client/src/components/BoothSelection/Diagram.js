@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const DiagramContainer = styled.div`
-    background: lightgreen;
+    background: white;
 `
 
 export default function Diagram() {

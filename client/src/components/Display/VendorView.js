@@ -5,8 +5,6 @@ import { AppStateContext } from "../../providers/Store";
 import { ProgressBar } from "../ProgressBar";
 // import { Card } from "../Card";
 
-import { BoothSelection } from '../BoothSelection'
-
 const VendorViewContainer = styled.div`
   border: 2px dashed purple;
 `;
@@ -52,7 +50,6 @@ export default function VendorView(props) {
         message={"You have created an account."}
       /> */}
 
-      <BoothSelection />
 
       {/* <ContentWrapper>
         <BodyText>Please complete the following:</BodyText>
