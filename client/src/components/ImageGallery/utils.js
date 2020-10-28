@@ -101,3 +101,7 @@ export function setThumbnail(thumbnailStatus) {
             return 'Default case.'
     }
 }
+
+export function setGallery() {
+    
+}

@@ -223,6 +223,8 @@ export default function Playground() {
             <h4>props</h4>
             <Card />
             {/* END OF CARD COMPONENT */}
+
+
         </PlaygroundContainer>
     )
 }

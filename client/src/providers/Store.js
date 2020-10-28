@@ -4,7 +4,7 @@ export const AppStateContext = React.createContext()
 
 export default function Store({ children }) {
     const [appState, setAppState] = useState({
-        userLoggedIn: true,
+        userLoggedIn: false,
         isLoading: false,
         currentUser: {
             userDetails: {
@@ -12,7 +12,7 @@ export default function Store({ children }) {
                 lastName: '',
                 userPhone: '',
                 userEmail: '',
-                isAdmin: true,
+                isAdmin: false,
                 formProgressStep: 1
             },
             vendorDetails: {

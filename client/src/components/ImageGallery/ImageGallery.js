@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Thumbnail from './Thumbnail'
 import MainImage from './MainImage'
 
+
 const ImageGalleryContainer = styled.div`
     box-sizing: border-box;
     width: 856px;
@@ -21,7 +22,6 @@ const Wrapper = styled.div`
 
 const ThumbnailWrapper = styled.div`
     box-sizing: border-box;
-
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     width: 352px;
@@ -60,7 +60,7 @@ export default function ImageGallery() {
                     <Thumbnail status={'active'} onClick={testClick} />
                 </ThumbnailWrapper>
             </Wrapper>
-            <MainImage />
+            <MainImage />  
         </ImageGalleryContainer>
     )
 }
