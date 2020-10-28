@@ -4,7 +4,7 @@ import boothIcon from "../../assets/icons/booth.svg";
 import openIcon from "../../assets/icons/open.svg";
 import closeIcon from "../../assets/icons/close.svg";
 import chargeIcon from "../../assets/icons/charge.svg";
-import stricklandLogo from "../..assets/images.strickland.jpg"
+import buntyLogo from "../../assets/logos/Company logo image.svg";
 
 const CardContainer = styled.div`
   border: solid red 1px;
@@ -19,6 +19,7 @@ const CardContainer = styled.div`
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
     0px 4px 5px rgba(0, 0, 0, 0.2);
 `;
+
 
 const CompanyName = styled.h5`
     border: 1px solid blue;
@@ -35,6 +36,9 @@ const CompanyName = styled.h5`
     margin: 0;
 
 `;
+const NameContainer=styled.div`
+
+`
 
 const NameText = styled.h6`
   border: solid yellow 1px;
@@ -61,13 +65,13 @@ const CategoryText = styled.p`
   margin: 0;
 `;
 
-const CompanyLogo =styled.div`
-width: 67.88px;
-height: 48px;
-`
+const CompanyLogo = styled.div`
+  width: 67.88px;
+  height: 48px;
+`;
 
 const BoothNumberText = styled.div`
-border: 1px solid orange;
+  border: 1px solid orange;
   margin: 0;
   font-family: Open Sans;
   font-style: normal;
@@ -78,7 +82,7 @@ border: 1px solid orange;
   color: #403926;
 `;
 
-const PowerResultText=styled.div`
+const PowerResultText = styled.div`
   margin: 0;
   font-family: Open Sans;
   font-style: normal;
@@ -87,8 +91,7 @@ const PowerResultText=styled.div`
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #403926;
-
-`
+`;
 
 const IconContainer = styled.div`
   display: flex;
@@ -101,14 +104,18 @@ export default function AdminCard() {
   return (
     <CardContainer>
       <CompanyName>{"Strickland Propane"}</CompanyName>
-      <CompanyLogo>{}</CompanyLogo>
-      <NameText>{"Hank Hill"}</NameText>
-      <CategoryText>{"Propane & Propane Accessories"}</CategoryText>
+      
+        <CompanyLogo>
+          <img src={buntyLogo} />
+        </CompanyLogo>
+        <NameText>{"Hank Hill"}</NameText>
+        <CategoryText>{"Propane & Propane Accessories"}</CategoryText>
+    
       <IconContainer>
         <img src={boothIcon}></img>
-        <BoothNumberText>{'A2'}</BoothNumberText>
+        <BoothNumberText>{"A2"}</BoothNumberText>
         <img src={chargeIcon}></img>
-        <PowerResultText>{'Yes'}</PowerResultText>
+        <PowerResultText>{"Yes"}</PowerResultText>
         <img src={closeIcon}></img>
         <img></img>
       </IconContainer>
