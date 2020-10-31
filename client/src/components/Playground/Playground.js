@@ -10,8 +10,9 @@ import { EditSheet } from '../EditSheet'
 import { Button } from '../Button'
 import { ProgressBar } from '../ProgressBar'
 import { ImageGallery } from '../ImageGallery'
-import {Card } from '../Card'
+import { Card } from '../Card'
 import { TextButton } from '../TextButton'
+import { SponsorshipCard } from '../SponsorshipCard';
 
 
 // STYLING FOR PLAYGROUND COMPONENTS - DO NOT EDIT
@@ -183,13 +184,13 @@ export default function Playground() {
             <h4>'buttonStyle': prop values</h4>
 
             <p>'primary'</p>
-            <Button onClick={onClick} buttonStyle={'primary'}>Sign up</Button>
+            <Button  buttonText={'Sign Up'} onClick={onClick} buttonStyle={'primary'}></Button>
 
             <p>'secondary'</p>
-            <Button onClick={onClick} buttonStyle={'secondary'}>Sign up</Button>
+            <Button buttonText={'Sign Up'} onClick={onClick} buttonStyle={'secondary'}></Button>
 
             <p>'google-button'</p>
-            <Button onClick={onClick} buttonStyle={'google-button'}>Sign up</Button>
+            <Button onClick={onClick} buttonText={'Sign Up'} buttonStyle={'google-button'}></Button>
 
             <p>'Sign in Button'</p>
             <TextButton />
@@ -223,6 +224,15 @@ export default function Playground() {
             <h4>props</h4>
             <Card />
             {/* END OF CARD COMPONENT */}
+
+
+            {/* Sponsorship Card Component */}
+            <h2>Sponsorship Card</h2>
+            <h2>Props</h2>
+            <SponsorshipCard />
+
+
+            {/* End of Sponsorship Card */}
 
 
         </PlaygroundContainer>

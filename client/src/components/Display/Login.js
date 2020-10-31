@@ -154,8 +154,8 @@ export default function Login() {
                 <h3>Create an account</h3>
                 <Input status={'default'} label={'Email'} marginTop={'64px'} onBlur={getEmail} />
                 <Input status={'default'} label={'Password'} marginTop={'20px'} onBlur={getPassword} />
-                <Button buttonStyle={'primary'} marginTop={'56px'} onClick={createAccount}>Sign Up</Button>
-                <Button buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
+                <Button buttonText={'Sign Up'} buttonStyle={'primary'} marginTop={'56px'} onClick={createAccount}>Sign Up</Button>
+                <Button buttonText={'Sign Up'}  buttonStyle={'google-button'} marginTop={'32px'}>Sign Up</Button>
             </LeftPane>
             <RightPane>
                 <h2>View previous VetFest events.</h2>

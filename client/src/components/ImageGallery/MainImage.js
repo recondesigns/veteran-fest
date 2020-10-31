@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import vetfest1Thumbnail from '../../assets/images/vetfest01-500px.jpg'
-import ArrowBtn from './ArrowBtn'
+
 
 const MainImageContainer = styled.div`
     width: 472px;
@@ -17,7 +17,6 @@ export default function MainImage() {
     return (
         <MainImageContainer>
             <img src={vetfest1Thumbnail} alt={'thumbnail'} />
-            <ArrowBtn />
         </MainImageContainer>
     )
 }

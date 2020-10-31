@@ -40,18 +40,20 @@ const GoogleContainer = styled.div`
   }
 `;
 
+
 export default function Button(props) {
-  const { buttonStyle, onClick, marginTop } = props;
+  const { buttonStyle, onClick, marginTop, buttonText } = props;
   const { color, background, border, display } = setButtonStyle(buttonStyle);
 
   return (
-    <StyledButton marginTop={marginTop}
+    <StyledButton 
+      marginTop={marginTop}
       background={background}
       color={color}
       border={border}
-      onClick={onClick}
+      onClick={onClick} 
     >
-      <p>{"Sign up"}</p>
+      <p>{buttonText}</p>
       <GoogleContainer display={display}>
         <p>with</p>
         <img src={googleIcon} alt={"Sign in using Google"} />
